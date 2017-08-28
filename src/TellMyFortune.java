@@ -5,29 +5,32 @@ public class TellMyFortune {
 	public static void main(String[] args) {
 		
 		Scanner input = new Scanner(System.in);
-				
+		
+		//First Name
 		System.out.println("Greetings, welcome to the fortune teller.");
 		System.out.println("I will tell you your fortune, but first I need your first name.");
 		String fName =  input.nextLine();
 		if (fName.equalsIgnoreCase("quit")) {
+			System.out.println("Nobody likes a quitter...");
 			System.exit(0);
 		}
 		
+		//Last Name
 		System.out.println("And now your last name.");
 		String lName = input.nextLine();
 		if (lName.equalsIgnoreCase("quit")) {
 			System.out.println("Nobody likes a quitter...");
 			System.exit(0);
 		}
-		
+		//Age input
 		System.out.println("How old are you?");
 		int age =  input.nextInt();
 
-		
+		//Birth Month
 		System.out.println("In which month were you born, please enter the month number");
 		int birthMonth = input.nextInt();
 		
-		
+		//Favorite Color
 		System.out.println("What is your favorite ROYGBIV color? If you dont know what 'ROYGBIV' is type 'help'.");
 		String favColor = input.next();
 		while (favColor.equalsIgnoreCase("help")) {
@@ -36,12 +39,14 @@ public class TellMyFortune {
 			favColor = input.next();
 		}
 			
-		
+		//Siblings Count
 		System.out.println("How many siblings do you have?");
 		int siblings = input.nextInt();
 		input.close();
 		
+		//Name
 		System.out.print(fName + " " + lName);
+		
 		//Age
 		if (age % 2 == 0) {
 			System.out.print(" will retire in 17 years with");
